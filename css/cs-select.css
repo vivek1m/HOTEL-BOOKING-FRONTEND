@@ -60,6 +60,7 @@ div.cs-select:focus {
 	margin-left: 1em;
 }
 
+
 .cs-select.cs-active > span::after {
 	-webkit-transform: translateY(-50%) rotate(180deg);
 	transform: translateY(-50%) rotate(180deg);
