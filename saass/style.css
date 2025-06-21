@@ -333,4 +333,90 @@ figure {
 }
 
 
+.btn-luxe-primary {
+  background: #3c4146;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: transparent;
+  overflow: hidden;
+  // height: 70px;
+  padding: 10px 20px;
+  position: relative;
+  @include transition(.3s);
+  i {
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    right: -20px;
+    margin-top: -8px;
+    @include transition(.3s);
+  }
+  
+  &:hover {
+    background: darken(#3c4146, 15%);
+    padding-right: 40px;
+    i {
+      right: 10px;
+    }
+  }
+  &:focus, &:active {
+    background: #1e2123!important;
+  }
+}
+
+//HEADER
+#fh5co-header{
+  margin-bottom: 0;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-header{
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+#fh5co-header-section{
+  background: transparent;
+  padding:0;
+  width: 100%;
+  @media screen and (max-width: $screen-sm) {
+    padding: 2.4em 0;
+  }
+}
+.nav-header{
+  position: relative;
+  float: left;
+  width: 100%;
+}
+#fh5co-logo{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  float: left;
+  margin-bottom: 0;
+  margin-top: 1.4em;
+  a{
+    color: rgba($brand-white,1);
+    position: relative;
+    text-decoration: none;
+    &:hover, &:focus{
+      color: rgba($brand-white,.9) !important;
+      text-decoration: none;
+    }
+  }
+  span{
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
+  }
+
+
+
+
 
