@@ -183,3 +183,154 @@ figure {
 }
 
 
+// Buttons
+// Buttons
+.btn {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  @include border-radius(2px);
+  @include transition(.5s);
+  &.btn-md {
+    padding: 10px 20px!important;
+  }
+  &.btn-lg {
+    padding: 18px 36px!important;
+  }
+  &:hover, &:active, &:focus {
+    box-shadow: none!important;
+    outline: none!important;
+    color: $brand-white !important;
+  }
+}
+.btn-primary {
+  background: $brand-primary;
+  color: $brand-white;
+  border: 2px solid $brand-primary;
+  &:hover, &:focus, &:active {
+    // background: lighten($brand-black, 20%)!important;
+    // border-color: lighten($brand-black, 20%)!important;
+    // background: lighten($brand-black, 20%)!important;
+    background: $brand-secondary !important;
+    border-color: $brand-secondary !important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $brand-primary;
+    border: 2px solid $brand-primary;
+    &:hover, &:focus, &:active {
+      background: $brand-primary;
+      color: $brand-white !important;
+    }
+  }
+}
+.btn-success {
+  background: $brand-success;
+  color: $brand-white;
+  border: 2px solid $brand-success;
+  &:hover, &:focus, &:active {
+    background: darken($brand-success, 5%)!important;
+    border-color: darken($brand-success, 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $brand-success;
+    border: 2px solid $brand-success;
+    &:hover, &:focus, &:active {
+      background: $brand-success;
+      color: $brand-white;
+    }
+  }
+}
+.btn-info {
+  background: $brand-info;
+  color: $brand-white;
+  border: 2px solid $brand-info;
+  &:hover, &:focus, &:active {
+    background: darken($brand-info, 5%)!important;
+    border-color: darken($brand-info, 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $brand-info;
+    border: 2px solid $brand-info;
+    &:hover, &:focus, &:active {
+      background: $brand-info;
+      color: $brand-white;
+    }
+  }
+}
+.btn-warning {
+  background: $brand-warning;
+  color: $brand-white;
+  border: 2px solid $brand-warning;
+  &:hover, &:focus, &:active {
+    background: darken($brand-warning, 5%)!important;
+    border-color: darken($brand-warning, 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $brand-warning;
+    border: 2px solid $brand-warning;
+    &:hover, &:focus, &:active {
+      background: $brand-warning;
+      color: $brand-white;
+    }
+  }
+}
+.btn-danger {
+  background: $brand-danger;
+  color: $brand-white;
+  border: 2px solid $brand-danger;
+  &:hover, &:focus, &:active {
+    background: darken($brand-danger, 5%)!important;
+    border-color: darken($brand-danger, 5%)!important;
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $brand-danger;
+    border: 2px solid $brand-danger;
+    &:hover, &:focus, &:active {
+      background: $brand-danger;
+      color: $brand-white;
+    }
+  }
+}
+
+.btn-outline {
+  background: none;
+  border: 2px solid lighten($brand-black, 50%);
+  font-size: 16px;
+  @include transition(.3s);
+  &:hover, &:focus, &:active {
+    box-shadow: none;
+  }
+}
+
+.btn.with-arrow {
+  position: relative;
+  @include transition(.3s);
+  i {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -8px;
+    @include transition(.2s);
+  }
+  &:hover {
+    padding-right: 50px;
+    i {
+      color: $brand-white;
+      right: 18px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+
+
