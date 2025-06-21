@@ -101,3 +101,85 @@ $form-group-margin-bottom: 30px !default;
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin themify() {
+  font-family: 'themify';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Import 
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
+@import 'bootstrap';
+
+
+
+
+/* =======================================================
+*
+*   Template Style 
+*   Edit this section
+*
+* ======================================================= */
+
+// Template Base
+
+body {
+  font-family: $font-primary;
+  line-height: 1.8;
+  font-size: 16px;
+  background: $brand-body-bg;
+  color: #848484;
+  font-weight: 300;
+  overflow-x: hidden;
+  &.fh5co-offcanvas {
+    overflow: hidden;
+  }
+}
+a {
+  color: $brand-primary;
+  @include transition(.5s);
+  &:hover{
+    text-decoration: none !important;
+    color: $brand-primary !important;
+  }
+}
+p, ul, ol {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  color: rgba($brand-lighter,1);
+  font-weight: 300;
+  font-family: $font-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgba($brand-black,.7);
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+figure {
+  margin-bottom: 2em;
+}
+::-webkit-selection {
+  color: $brand-body-color;
+  background: $brand-selection-color;
+}
+
+::-moz-selection {
+  color: $brand-body-color;
+  background: $brand-selection-color;
+}
+
+::selection {
+  color: $brand-body-color;
+  background: $brand-selection-color;
+}
+
+
