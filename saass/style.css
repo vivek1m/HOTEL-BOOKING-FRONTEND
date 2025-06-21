@@ -415,6 +415,49 @@ figure {
     margin: 0;
     font-weight: 100;
   }
+  
+  @media screen and (max-width: $screen-sm) {
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
+  
+}
+
+// MENU
+/* Superfish Override Menu */
+.sf-menu {
+  margin: 0!important;
+}
+
+.sf-menu {
+  float: right;
+}
+.sf-menu ul {
+  box-shadow: none;
+  border: transparent;
+  min-width: 12em; 
+  *width: 12em; 
+}
+
+.sf-menu a {
+  color: rgba($brand-white, 0.4);
+  padding: 2.4em 1.3em!important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: none;
+  border-top: none;
+  border-top: none;
+  text-decoration: none;
+  zoom: 1;
+  font-size: 13px;
+  border-bottom: none !important;
+
+  &:hover,&:focus,&.active{
+    color: $brand-white !important;
+  }
+}
+
 
 
 
