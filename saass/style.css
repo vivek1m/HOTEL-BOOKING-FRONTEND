@@ -619,8 +619,33 @@ figure {
       }
     } 
   }
-  
+  }
+
+.site-header.has-image #primary-menu .sub-menu {
+  border-color:#ebebeb;
+  -webkit-box-shadow:0 5px 15px 4px rgba(0,0,0,0.09);
+  -moz-box-shadow:0 5px 15px 4px rgba(0,0,0,0.09);
+  -ms-box-shadow:0 5px 15px 4px rgba(0,0,0,0.09);
+  -o-box-shadow:0 5px 15px 4px rgba(0,0,0,0.09);
+  box-shadow:0 5px 15px 4px rgba(0,0,0,0.09);
+  &:before {
+    display:none; 
+  }
 }
+#fh5co-primary-menu .fh5co-sub-menu a {
+  letter-spacing: 0;
+  padding:0 15px;
+  font-size:16px;
+  line-height:34px;
+  color: $brand-white !important;
+  text-transform:none;
+  background:none;
+  &:hover {
+    color: #f8e69f !important;
+    background: none !important;
+  }
+}
+
 
 
 
