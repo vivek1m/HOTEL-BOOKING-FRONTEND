@@ -457,6 +457,127 @@ figure {
   }
 }
 
+.sf-menu li,
+.sf-menu ul li,
+.sf-menu ul ul li,
+.sf-menu li:hover,
+.sf-menu li.sfHover  {
+  background: transparent;
+}
+.sf-menu ul li a,
+.sf-menu ul ul li a {
+  text-transform: none;
+  padding: .25em 1em!important; 
+  letter-spacing: 1px;
+}
+.sf-menu li:hover a,
+.sf-menu li.sfHover a,
+.sf-menu ul li:hover a,
+.sf-menu ul li.sfHover a,
+.sf-menu li.active a {
+  color: rgba($brand-white, 0.4);
+  // text-shadow: 2px 2px 1px rgba(0, 0, 0, .08);
+}
+.sf-menu ul li:hover,
+.sf-menu ul li.sfHover {
+  background: transparent;
+}
+
+
+.sf-menu ul li {
+  background: transparent;
+}
+.sf-arrows .sf-with-ul {
+  padding-right: 2.5em;
+  *padding-right: 1em;
+}
+.sf-arrows .sf-with-ul:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -3px;
+  height: 0;
+  width: 0;
+  border: 5px solid transparent;
+  border-top-color: #ccc; 
+}
+
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+  border-top-color: #ccc; 
+}
+.sf-arrows ul .sf-with-ul:after {
+  margin-top: -5px;
+  margin-right: -3px;
+  border-color: transparent;
+  border-left-color: #ccc;
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+  border-left-color: #ccc;
+}
+
+// Menu Override
+#fh5co-menu-wrap {
+  position: relative;
+  z-index: 2;
+  display: block;
+  float: right;
+  // margin-top: 22px;
+  .sf-menu a {
+    // padding: 1em .75em;
+  }
+}
+#fh5co-primary-menu {
+  > li {
+    > .sf-with-ul {
+      &:after {
+        border: none!important;
+        @include themify();
+        position: absolute;
+        float: right;
+        margin-right: 3px;
+        // top: 15px;
+        top: 50%;
+        margin-top: -7px;
+        content: "\e64b";
+        color: rgba($brand-white,.4);
+      }
+      &:hover,&:focus{
+        &:after{
+          color: $brand-white !important;
+        }
+      }
+      // optional
+      &.active:after{
+        color: rgba($brand-white,1);
+      }
+    }
+    > ul {
+      li {
+        position: relative;
+        > .sf-with-ul {
+          &:after {
+            border: none!important;
+            @include themify();
+            position: absolute;
+            float: right;
+            margin-right: 10px;
+            top: 20px;
+            font-size: 16px;
+            content: "\e649";
+            color: rgba($brand-white,.5);
+          }
+        }
+      }
+    }
+  } 
+}
+
+
 
 
 
