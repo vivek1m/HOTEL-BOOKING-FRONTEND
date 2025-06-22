@@ -576,6 +576,52 @@ figure {
     }
   } 
 }
+#fh5co-primary-menu .fh5co-sub-menu {
+  padding: 7px;
+  background: rgba($brand-primary, 1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+
+  -webkit-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  -moz-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  -ms-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  -o-box-shadow:0 5px 15px rgba(0,0,0,0.15);
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+  &:after{
+    position: absolute;
+    top: -8px;
+    left: 21px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid $brand-primary;
+    // border-bottom: 8px solid rgba(0, 0, 0, 0.8);
+    border-left: 8px solid transparent;
+    content: '';
+  }
+  > li {
+    > .fh5co-sub-menu {
+      left: 103%;
+      &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-right: 0px solid transparent;
+        border-bottom: 0px solid $brand-white;
+        // border-bottom: 8px solid rgba(0, 0, 0, 0.8);
+        border-left: 0px solid transparent;
+        content: '';
+      }
+    } 
+  }
+  
+}
+
 
 
 
