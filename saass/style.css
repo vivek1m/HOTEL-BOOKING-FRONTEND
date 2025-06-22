@@ -770,6 +770,189 @@ figure {
 
 
 
+// Select Style Override
+div.cs-select{
+  span{
+    padding: 5px 10px;
+  }
+}
+
+.cs-skin-border  {
+  font-size: 16px;
+  color: #fff;
+  @media screen and (max-width: 829px) {
+    max-width: 829px!important;
+  }
+  @media screen and (max-width: 30em) {
+    font-size: 16px;
+  }
+  > span {
+    // border: 2px solid #fff; 
+    border: 2px solid rgba(255,255,255,.5); 
+    &::after {
+      font-size: 14px!important;
+    }
+  }
+  .cs-selected {
+    > span {
+      &::after {
+        font-size: 14px!important;
+      }
+    }
+  }
+}
+
+.wrap{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+#availability {
+  background: $brand-primary;
+  width: 100%;
+  top: 1em;
+  z-index: 99;
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, .2);
+  -ms-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, .2);
+  -o-box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, .2);
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, .2);
+  @media screen and (max-width: 1176px) {
+    width: 100%;
+    // margin-bottom: 7em;
+  }
+  @media screen and (max-width: 1130px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 915px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 915px) {
+    width: 100%;
+    top: 0;
+  }
+  @media screen and (max-width: 769px) {
+    width: 100%;
+  }
+  > form {
+    @include flex();
+    @media screen and (max-width: 829px) {
+      @include flexwrap();  
+    }
+  }
+  .a-col {
+    width: 20%;
+    float: left;
+    position: relative;
+    padding: 14px;
+
+    @media screen and (max-width: 829px) {
+      width: 100% !important;
+    }
+    &.alternate {
+      width: 30%;
+     
+      @media screen and (max-width: 829px) {
+        width: 50% !important;   
+      }
+      @media screen and (max-width: 492px) {
+        width: 100% !important;
+      }
+    }
+    &.action {
+      padding: 0!important;
+      position: relative;
+      @include flex();
+      justify-content: center;
+      a {
+        align-items: center;
+        vertical-align: middle;
+        heght: 100%;
+        line-height: 20px;
+        padding: 14px;
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-align: left;
+        background: $brand-secondary;
+        text-transform: uppercase;
+        @include transition(.5s);
+        &::after {
+          @include themify;
+          top: 50%;
+          right: 20px;
+          margin-top: -10px;
+          content: "\e649";
+          position: absolute;
+          font-size: 16px;
+          color: $brand-primary;
+          @include transition(.2s);
+        }
+        &:hover {
+          text-decoration: none;
+          background: darken(#3c4146, 10%);
+          outline: none;
+          &::after {
+            right: 10px;
+          }
+        }
+        &:focus, &:active {
+          outline: none;
+          text-decoration: none;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+    .input-field {
+      width: 100%;
+      label, input[type="text"] {
+        display: inline-block;
+      }
+      label {
+        margin-right: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+        float: left;
+        margin-top: 7px;
+      }
+      input[type="text"] {
+
+        float: right;
+        margin-right: 0;
+        // width: 120px;
+        width: 60%;
+        height: 42px;
+        font-size: 15px;
+        line-height: 36px;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+        color: #fff;
+        // background: transparent;
+        background: transparent url(../images/arrow_down_input.png) 98% 90% no-repeat;
+        border: 2px solid rgba(255,255,255,.5);
+        border-radius: 0px;
+        box-shadow: none;
+        &:focus, &:active {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }  
+}
+
+
+
+
 
 
 
