@@ -951,6 +951,60 @@ div.cs-select{
 }
 
 
+// Counters
+.fh5co-counters {
+  padding: 3em 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  .counter-wrap{
+    border: 1px solid red !important;
+  }
+  .fh5co-counter {
+    font-size: 40px;
+    display: block;
+    color: rgba($brand-black,.7);
+    font-family: $font-primary;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: .3em;
+  }
+  .fh5co-counter-label {
+    color: rgba($brand-black,.5);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 2em;
+    display: block;
+  }
+}
+
+
+
+// Featured Column
+
+#featured-hotel {
+  float: left;
+  width: 100%;
+}
+
+// 1 col
+.feature-full-1col {
+  @include flex();
+  flex-flow: row wrap;
+  width: 100%;
+  margin-bottom: 30px;
+  .image, .desc {
+    float: left;
+    width: 50%;
+    @media screen and (max-width: $screen-sm) {
+      
+      flex-wrap: wrap;
+      position: relative;
+      width: 100%;
+    }
+
+
 
 
 
