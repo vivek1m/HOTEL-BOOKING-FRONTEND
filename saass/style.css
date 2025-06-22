@@ -648,6 +648,129 @@ figure {
 
 
 
+//fh5co-hero
+#fh5co-hero {
+  margin-bottom: 0;
+  // min-height: 700px;
+  background: $brand-white url(../images/loader.gif) no-repeat center center;
+  margin-bottom: 0 !important;
+  position: relative;
+  @include flex();
+  @include flexwrap();
+  .btn {
+    font-size: 24px;
+    &.btn-primary {
+      padding: 14px 30px!important;
+    }
+  }
+  .flexslider {
+    border: none;
+    z-index: 1;
+    margin-bottom: 0;
+
+    .slides {
+      position: relative;
+      overflow: hidden;
+      li {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        min-height: 700px;
+        position: relative;
+        &:after{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          content: '';
+          background: rgba($brand-black,.4);
+          z-index: 1;
+        }
+      }
+    }
+    .flex-control-nav {
+      bottom: 60px;
+      z-index: 1000;
+      right: 20px;
+      width: 25px;
+      float: right;
+      li {
+        display: block !important;
+        margin-bottom: 20px;
+        float: right;
+        a {
+          display: block !important;
+          background: rgba(255,255,255,.4);
+          box-shadow: none;
+          width: 12px;
+          height: 12px;
+          cursor: pointer;
+          border: 2px solid transparent;
+          &:active, &:focus {
+            outline: none;
+            border: 2px solid rgba(255,255,255,9)!important;
+          }
+          &.flex-active {
+            cursor: pointer;
+            border: 2px solid rgba(255,255,255,9);
+            background: transparent;
+          }
+        }
+      }
+    }
+    .flex-direction-nav {
+      display: none;
+    }
+  }
+}
+
+.slider-text {
+  display: table;
+  height: auto;
+  z-index: 999;
+  min-height: 700px;
+  width: 100%;
+  > .slider-text-inner {
+    display: table-cell;
+    vertical-align: middle;
+    min-height: 700px;
+    position: relative;
+    h2 {
+      font-size: 50px;
+      font-weight: 400;
+      color: $brand-white;
+      line-height: 60px;
+      @media screen and (max-width: $screen-sm) {
+        font-size: 24px;
+      }
+    }
+    p{
+      margin-bottom: 30px;
+      font-size: 20px;
+      color: rgba($brand-white,.8);
+      padding: 7px 0;
+      > span{
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        border-top:2px solid rgba($brand-white,.3);
+        border-bottom:2px solid rgba($brand-white,.3);
+      }
+      .btn{
+        font-size: 22px !important;
+        bordeR: 1px solid transparent;
+        @include border-radius(30px);
+        &:hover{
+          color: $brand-white !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+
 
 
 
