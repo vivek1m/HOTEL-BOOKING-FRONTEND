@@ -1004,6 +1004,275 @@ div.cs-select{
       width: 100%;
     }
 
+  }
+  .image {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    .descrip {
+      width: 180px;
+      position: absolute;
+      top: 0;
+      right: -180px;
+      padding: 10px;
+      background: $brand-primary;
+      @include transition(.2s);
+      p{
+        margin: 0;
+        color: $brand-white;
+      }
+      small,span{
+        display: block;
+      }
+      small{
+        color: rgba(255,255,255,.5);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+    @media screen and (max-width: $screen-sm) {
+      height: 300px;
+    }
+  }
+  .desc {
+    padding: 50px;
+    background: #fff;
+    @media screen and (max-width: $screen-sm) {
+      padding: 30px;
+    }
+  }
+  &:hover, &:focus{
+    .image{
+      .descrip{
+        right: 0;
+      }
+    }
+  }
+}
+
+// 2 col
+.feature-full-2col {
+  margin-bottom: 40px;
+  @include flex();
+  @media screen and (max-width: $screen-sm) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .f-hotel {
+    float: left;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    @include flex();
+    flex-flow: row wrap;
+    @media screen and (max-width: $screen-md) {
+      width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .descrip {
+      width: 180px;
+      position: absolute;
+      top: 0;
+      right: -180px;
+      padding: 10px;
+      background: $brand-primary;
+      @include transition(.2s);
+      p{
+        margin: 0;
+        color: $brand-white;
+      }
+      small,span{
+        display: block;
+      }
+      small{
+        color: rgba(255,255,255,.5);
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+    .image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      @media screen and (max-width: $screen-xs) {
+        position: relative;
+        height: 200px;
+      }
+    }
+    .image, .desc {
+      width: 50%;
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+    .desc {
+      padding: 30px;
+      background: #fff;
+    }
+    &:hover, &:focus{
+      .image{
+        .descrip{
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+#featured-hotel, 
+#hotel-facilities,
+#testimonial,
+#fh5co-blog-section,
+#fh5co-hotel-section,
+#fh5co-services-section,
+#fh5co-contact-section,
+#footer{
+  padding: 7em 0;
+}
+
+
+
+#hotel-facilities {
+  float: left;
+  width: 100%;
+  position: relative;
+  @include transition(.5s);
+}
+
+#tabs {
+  float: left;
+  width: 100%;
+
+  .tabs-nav {
+    border-bottom: 1px solid #f0f0f0;
+    float: left;
+    width: 100%;
+    > a {
+      float: left;
+      width: 16.666667%;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ccc;
+      padding: 10px 0 40px 0;
+      border-bottom: 1px solid transparent;
+      margin-bottom: -1px;
+      position: relative;
+      @include transition(.3s);
+      // @media screen and (max-width: $screen-sm){
+      //   width: 50%;
+      // }
+      // @media screen and (max-width: $screen-xs){
+      //   width: 100%;
+      // }
+      > .icon {
+        margin-bottom: 20px;
+        @include transition(.3s);
+        &:before {
+          font-size: 40px;
+        }
+      }
+      > .icon, > span {
+        display: block;
+      }
+      > span {
+        font-weight: 700;
+      }
+      &.active {
+        color: $brand-primary;
+        border-bottom: 1px solid $brand-primary;
+        .icon {
+          color: $brand-primary;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        .icon {
+          color: $brand-primary;
+        }
+        color: $brand-primary;
+      }
+      &:focus, &:active {
+        outline: none;
+        text-decoration: none!important;
+        > .icon, > span {
+          text-decoration: none!important;
+        }
+      }
+    }
+  }
+  .tab-content-container {
+    position: relative;
+    width: 100%;
+    float: left;
+    padding-top: 40px;
+    .tab-content {
+      position: absolute;
+      width: 100%;
+      float: left;
+      opacity: 0;
+      // display: none;
+      @include transition(.5s);
+      &.active {
+        // opacity: 1;
+        // display: block;
+      }
+      &.show {
+        opacity: 1;
+      }
+    }  
+  }
+
+  .heading {
+    font-size: 40px;
+    color: #52565b;
+    margin: 0 0 30px 0;
+    padding: 0;
+  }
+  .super-heading-sm {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #bcbcbc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .service-hour {
+    padding-top: 20px;
+    > span {
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      color: #bcbcbc;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+    }
+    > strong {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #52565b;
+    }
+  }
+  
+}
+    
+
 
 
 
