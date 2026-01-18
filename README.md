@@ -38,11 +38,3 @@ cd HOTEL-BOOKING-FRONTEND
 
 
 Open index.html in your browser.
-
-📌 Note
-
-This is a frontend-only project. Backend integration is required for real bookings and data handling.
-
-📄 License
-
-MIT License
